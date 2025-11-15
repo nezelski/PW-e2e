@@ -9,10 +9,10 @@ let popupModal: Locator;
 
 
 test.beforeEach(async ({ page }) => {
-    usernameField = page.getByTestId('username');
-    emailField = page.getByTestId('email');
-    placeButton = page.getByTestId('submit-order');
-    popupModal = page.locator("#popup-message");
+    usernameField = page.locator('#username');
+    emailField = page.locator('#email');
+    placeButton = page.locator('#submit-order');
+    popupModal = page.locator("[id=popup-message]");
 
     const filePath = `file://${path.resolve("src/order-flow.html")}`
     await page.goto(filePath);
