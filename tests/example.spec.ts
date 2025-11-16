@@ -11,7 +11,7 @@ test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Click the get started link.
-  await page.locator("a[class^='getStarted']").click();//nth(1) - if few elements with this attributes
+  await page.locator("a[class^='getStarted']").click();//nth(1) - if few elements with the same attributes
 
   const installationHeader = page.locator("header h1");
   await expect(installationHeader).toBeVisible();
