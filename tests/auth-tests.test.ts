@@ -3,7 +3,7 @@ dotenv.config();
 import {test, expect} from '@playwright/test';
 import {faker} from "@faker-js/faker";
 
-const appUrl = {process.env.APP_URL}
+const appUrl = process.env.APP_URL
 const randomUsername = faker.internet.username();
 const randomPassword = faker.internet.password();
 
